@@ -1,5 +1,3 @@
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +7,39 @@
     <style>
         body {
             text-align: center;
-            background: #ffe4e1;
             font-family: Arial, sans-serif;
             color: #d6336c;
             padding-top: 50px;
+            margin: 0;
+            overflow: hidden;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        /* Fullscreen YouTube Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.77vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        h1, p {
+            position: relative;
+            z-index: 1;
         }
 
         img {
@@ -24,10 +47,16 @@
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/pS8vN5pdBL4?autoplay=1&mute=1&loop=1&controls=0&playlist=pS8vN5pdBL4" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
     <h1>The Most Prettiest Girl in the World 😍</h1>
     <p>No need to search... It's YOU, Laila! 💖</p>
 
